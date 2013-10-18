@@ -22,6 +22,5 @@ get '/survey/:url' do
   @survey_url = params[:url]
 
   @survey = Survey.find_by_url("/survey/#{@survey_url}")
-
   erb :display_survey
 end

@@ -36,3 +36,8 @@ nav {
   color: green;
   text-decoration: none;
 }
+
+.home{
+  float:right;
+  padding-right:20px;
+}

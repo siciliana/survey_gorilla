@@ -19,10 +19,8 @@
 <div>
   <h2>Surveys you have taken:</h2>
     <% current_user.submissions.each do |submission| %>
-      <% submission.surveys.each do |survey| %>
         <ul class="survey_titles">
-          <li>survey.title</li>
+          <li><%= submission.survey.title %></li>
         </ul>
-      <% end %>
     <% end %>
 </div>

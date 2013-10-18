@@ -1,5 +1,8 @@
 get '/' do
-  # Look in app/views/index.erb
+  # if session[:user_id] != nil
+  #   @user = User.find_by_id(session[:user_id])
+  #   redirect to "/welcome/#{current_user.id}"
+  # end
   erb :index
 end
 

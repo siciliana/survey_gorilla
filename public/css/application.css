@@ -31,3 +31,8 @@ nav {
 .logout {
   float:right;
 }
+
+.title {
+  color: green;
+  text-decoration: none;
+}

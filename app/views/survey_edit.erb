@@ -1,10 +1,12 @@
-  <form action="/survey_edit" method="POST">
+  <h1> Edit your survey </h1>
+
+  <form action="/survey_edit/<%= @survey.id %>" method="POST">
     <label for="Title">Title</label><input type="text" name="title" value="<%=@survey.title%>"><br>
     <br>
     <label for="add_question">Add question</label>
-    <textarea cols="50" rows="5"><%= @survey.questions.first %></textarea name="add_question"><br>
+    <textarea cols="50" rows="5" name="add_question"><%= @survey.questions.first.q_title %></textarea><br>
     <br>
-    <input type="submit" value="Submit question"></input>
+    <input type="submit" value="Finish editing"></input>
   </form>
 
 

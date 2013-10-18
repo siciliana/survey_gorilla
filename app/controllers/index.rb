@@ -1,11 +1,6 @@
 get '/' do
-  # if session[:user_id] != nil
-  #   @user = User.find_by_id(session[:user_id])
-  #   redirect to "/welcome/#{current_user.id}"
-  # end
   erb :index
 end
-
 
 
 post '/signup' do
@@ -15,15 +10,25 @@ post '/signup' do
 end
 
 get '/welcome/:user_id' do
-  erb :welcome
+  if current_user
+    erb :welcome
+  else
+    redirect to '/'
+  end
 end
 
 post '/login' do
-  @user = User.find_by_username(params[:username])
-  if @user.authenticate(params[:password])
-    session[:user_id] = @user.id
+  found_user = User.find_by_username(params[:username])
+
+  if found_user && found_user.authenticate(params[:password])
+    session[:user_id] = found_user.id
     redirect to "/welcome/#{current_user.id}"
   else
     redirect to '/'
   end
+end
+
+get "/logout" do
+  session[:user_id] = nil
+  redirect to '/'
 end

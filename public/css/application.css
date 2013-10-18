@@ -11,3 +11,7 @@ th {
 nav {
   border:2px solid black;
 }
+
+.survey_titles li{
+  list-style-type: none;
+}

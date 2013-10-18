@@ -20,7 +20,7 @@
 <body>
     <nav>
       <% if current_user %>
-        <p>Hello, <%= current_user.username %></p>
+        <p>Hello, <%= current_user.username %> <a href="/logout">Logout</a></p>
       <% else %>
           <form action="/login" method="POST">
             <span>Log in</span>

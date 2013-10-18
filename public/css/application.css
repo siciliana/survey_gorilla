@@ -1,3 +1,7 @@
+html {
+  background-image:url('background.png');
+}
+
 body {
   font-family: 'Averia Serif Libre', cursive;
 
@@ -7,7 +11,9 @@ body {
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  border: 2px solid green;
+  background: white;
+  opacity: .8;
 }
 
 th {
@@ -15,10 +21,14 @@ th {
 }
 
 nav {
-  border:2px solid black;
+  border:2px solid green;
   margin:10px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 10px;
+  background-color:white;
+  color:rgb(17, 17, 107);
+  opacity: .8;
 }
 
 .survey_titles li{
@@ -36,14 +46,22 @@ nav {
 
 .logout {
   float:right;
+  text-decoration: none;
+  font-size: 25px;
+
+}
+.home{
+  clear:both;
+  float:right;
+  text-decoration: none;
+  font-size: 25px;
+    margin-top: -120px;
 }
 
 .title {
-  color: green;
+  color: rgb(18, 82, 10);
   text-decoration: none;
+  font-size: 50px;
 }
 
-.home{
-  float:right;
-  padding-right:20px;
-}
+

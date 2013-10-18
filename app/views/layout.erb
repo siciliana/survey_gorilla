@@ -18,6 +18,23 @@
   <title></title>
 </head>
 <body>
-  <%= yield %>
+    <nav>
+      <% if current_user %>
+        <p>Hello, <%= current_user.username %></p>
+      <% else %>
+          <form action="/login" method="POST">
+            <span>Log in</span>
+            <input type="text" name="username" placeholder="username">
+            <input type="password" name="password" placeholder="password">
+            <input type="submit" value="login">
+          </form> 
+      <%end %>
+      <p></p>
+    </nav>
+  <div class="container">
+
+
+    <%= yield %>
+  </div>
 </body>
 </html>

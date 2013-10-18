@@ -8,8 +8,11 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 # Require gems we care about
 require 'rubygems'
 
+require 'bcrypt'
+
 require 'uri'
 require 'pathname'
+require 'faker'
 
 require 'pg'
 require 'active_record'

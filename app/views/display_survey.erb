@@ -1,24 +1,30 @@
 <h1> <%= @survey.title %> </h1>
 
 <form action="/submit_response" method="POST">
-  <% @survey = Survey.find_by_id(10) %>
+  <% @survey = Survey.find_by_id(5) %>
 
   <% @survey.questions.each_with_index do |question, index| %>
+
+
     <% if question.q_type == "text" %>
       <%= question.q_title %><br>
       <label for="user_input"><input type="text" name="response[<%=question.id%>]"><br>
 
       <% elsif question.q_type == "multichoice" %>
         <%= question.q_title %><br>
-        <%= p question.q_type %>
         <% question.choices.each do |choice| %>
-        <input type="radio" name="response[<%= question.id %>]" value="<%= choice.id %>"><%= choice.c_title %>
+
+        <!-- not working because choices weren't seeded -->
+        <input type="radio" name="response[<%= question.id %>]" value="<%= choice.id %>"><%= choice.c_title %><br>
+
+
         <% end %>
+        <br><br><br>
     <% end %>
 
 
   <% end %>
-
+<input type="submit" value="Submit"></input>
 
 
 

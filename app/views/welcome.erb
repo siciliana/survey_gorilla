@@ -7,9 +7,14 @@
   <h2>Surveys you created:</h2>
     <% current_user.surveys.each do |survey| %>
     <ul class="survey_titles">
-      <li><%= survey.title %>  <a href='/survey_edit/<%= survey.id %>'>
-        <span id="edit">Edit</span></a>  <a href='/survey_delete/<%= survey.id %>'>
-        <span id="delete">Delete</span></a>  <a href='/survey_stats/<%= survey.id %>'>
+      <li><%= survey.title %> 
+        <a href='<%= survey.url %>'>
+        <span id="view">View</span></a>  
+        <a href='/survey_edit/<%= survey.id %>'>
+        <span id="edit">Edit</span></a>  
+        <a href='/survey_delete/<%= survey.id %>'>
+        <span id="delete">Delete</span></a>  
+        <a href='/survey_stats/<%= survey.id %>'>
         <span id="stats">Stats</span></a></li> 
     </ul>
     <% end %>

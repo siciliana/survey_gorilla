@@ -8,11 +8,19 @@ post '/create_survey' do
 
   short_link = Survey.generate_shortlink
   @survey = Survey.create(url: ("/survey/" + "#{short_link}"), title: params[:title], user_id: 1)
+  @question = Question.create(q_type: "text", q_title: params[:title], survey_id: @survey.id)
+  p "SURVEY: #{@survey}"
+  p "QUESTION: #{@question}"
+
+  @survey.questions << @question
+  current_user.surveys << @survey
+
   erb :survey_success
 end
 
 get '/survey/:url' do
   @survey_url = params[:url]
-  p @survey = Survey.find_by_url("/survey/#{@survey_url}")
+
+  @survey = Survey.find_by_url("/survey/#{@survey_url}")
   erb :display_survey
 end

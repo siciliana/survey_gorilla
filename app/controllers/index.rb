@@ -2,6 +2,12 @@ get '/' do
   erb :index
 end
 
+post '/signup' do
+  user = User.create(params[:user])
+  session[:user_id] = user.id
+  redirect to '/welcome'
+end
+
 get '/welcome/:user_id' do
   if current_user
     erb :welcome

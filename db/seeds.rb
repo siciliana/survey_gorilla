@@ -8,7 +8,7 @@ end
 end
 
 50.times do
-  Survey.find(rand(1..20)).questions << Question.create(q_title: Faker::Lorem.words(num = 4, supplemental = false), q_type: "text")
+  Survey.find(rand(1..20)).questions << Question.create(q_title: Faker::Lorem.words(num = 4, supplemental = false), q_type: ["text", "multichoice"].sample)
 end
 
 50.times do

@@ -1,5 +1,23 @@
 
 <form action="/submit_response" method="POST">
+  <%@survey = Survey.find_by_id(10) %>
+
   <label for="Title"><%= @survey.title %></label><br>
   <br>
+
+  <% @survey.questions.each_with_index do |question, index| %>
+    <%= "#Question# #{index+1}, Title: #{@survey.title}" %> <br>
+  <% end %>
+
+
+
+<!-- here we grab specific survey question -->
+
+<!--- text box for other user to answer in -->
+
+<!-- form input will then be saved as other user response -->
+
+  <br>
 </form>
+
+

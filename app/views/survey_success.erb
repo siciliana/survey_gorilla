@@ -1,5 +1,7 @@
+
 <h3>Your survey was successfully rendered to the interwebs!</h3>
 
 <h4>Here is your <a href="<%= @survey.url %>">magical linkage</a></h4>
+<%params[:url] = @survey.url%>
 
 <h4>And here is the magical <a href="/welcome/<%= current_user.id %>">way home!</a></h4>

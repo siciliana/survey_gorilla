@@ -12,7 +12,8 @@ post '/create_survey' do
   erb :survey_success
 end
 
-get '/survey/:survey_url' do
-  @survey = Survey.find_by_url(params[:url])
-  :display_survey
+get '/survey/:url' do
+  @survey_url = params[:url]
+  p @survey = Survey.find_by_url("/survey/#{@survey_url}")
+  erb :display_survey
 end

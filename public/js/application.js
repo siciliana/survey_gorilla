@@ -3,7 +3,10 @@ $(document).ready(function() {
     event.preventDefault();
     var url = '/get_add_question_partial'
     $.get(url, function(response) {
-      $('#add_question').append(response)
+        console.log(response);
+      $('#add_question').append(response);
     });
+
+
   });
 });

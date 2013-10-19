@@ -1,19 +1,34 @@
-html {
-  background-image:url('background.png');
+  html {
+/*  background-image:url('viking.jpg');*/
+/*  background-position:right bottom;*/
+  background-repeat:no-repeat;
+  background: url('viking.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
   font-family: 'Averia Serif Libre', cursive;
+}
 
+h1{
+  float:left;
 }
 
 .container {
+  float:left;
   margin: 20px auto;
   width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 2px solid green;
-  background: white;
-  opacity: .8;
+  padding: 0px 20px 20px 10px;
+  text-align: center;
+  background: rgb(92, 17, 17);
+  color:white;
+  -webkit-box-shadow: 0 0 5px 5px rgb(92, 17, 17);
+  box-shadow: 0 0 5px 5px rgb(92, 17, 17);
+  margin-left: 70px;
+  margin-top: 70px;
 }
 
 th {
@@ -21,14 +36,16 @@ th {
 }
 
 nav {
-  border:2px solid green;
-  margin:10px;
+  margin:20px;
+  margin-top:20px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 10px;
-  background-color:white;
-  color:rgb(17, 17, 107);
-  opacity: .8;
+  padding-top: 5px;
+  background-color:rgb(92, 17, 17);
+  color:white;
+  -webkit-box-shadow: 0 0 5px 5px rgb(92, 17, 17);
+  box-shadow: 0 0 5px 5px rgb(92, 17, 17);
 }
 
 .survey_titles li{
@@ -45,23 +62,76 @@ nav {
 }
 
 .logout {
-  float:right;
+/*  clear:both;
+  margin-top: -70px;*/
+ /* float:right;*/
   text-decoration: none;
   font-size: 25px;
-
+  color:white;
+  padding-right:10px;
 }
 .home{
-  clear:both;
-  float:right;
+ /* clear:both;
+  margin-top: -70px;*/
+  /*float:right;*/
   text-decoration: none;
   font-size: 25px;
-    margin-top: -120px;
+  color:white;
+  padding-right:10px;
 }
-
+.create_survey {
+/*  clear:both;
+  margin-top: -70px;*/
+/*  float:right;*/
+  text-decoration: none;
+  font-size: 25px;
+  color:white;
+  padding-right:10px;
+}
+.login {
+  float: right;
+  margin-top: -70px;
+  color:white;
+}
+.nav_bar_stuff{
+  float:right;
+  display:inline;
+  color:white;
+  text-decoration:none;
+}
 .title {
-  color: rgb(18, 82, 10);
+  color: white;
   text-decoration: none;
   font-size: 50px;
+  padding-left:30px;
 }
+
+
+.user_name {
+  clear:both;
+  padding-left:30px;
+  font-size: 20px;
+}
+
+.welcome_label {
+  padding-top: 15px;
+}
+
+.text_box {
+  -webkit-box-shadow: inset 0 0 5px#888;
+  box-shadow: inner 0 0 5px #888;
+}
+
+input[type="text"], input[type="password"] {
+  height: 35px;
+  width: 250px;
+  line-height: 35px;
+}
+
+
+
+
+
+
 
 

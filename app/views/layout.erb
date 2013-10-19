@@ -20,18 +20,20 @@
 </head>
 <body>
     <nav>
-      <h1><a class="title"> Gorilla Monkey?</a></h1>
+      <h1><a class="title"> Viking Gorilla?</a></h1>
       <% if current_user %>
-        <p>Hello, <%= current_user.username %>
-          <a class ="logout" href="/logout">Logout</a>
-          <a class="home" href="/welcome/<%= current_user.id %>">Home</a>
-        </p>
+          <div class="nav_bar_stuff">
+            <a class="create_survey" href="/create_survey">Create Survey</a>
+            <a class="home" href="/welcome/<%= current_user.id %>">Home</a>
+            <a class ="logout" href="/logout">Logout</a>
+        </div>
+        <p class="user_name"><%= current_user.username %></p>
       <% else %>
-          <form action="/login" method="POST">
-            <span>Log in</span>
-            <input type="text" name="username" placeholder="username">
-            <input type="password" name="password" placeholder="password">
-            <input type="submit" value="login">
+          <form class ="login" action="/login" method="POST">
+          
+            <input class="text_box" type="text" name="username" placeholder="username">
+            <input class="text_box" type="password" name="password" placeholder="password">
+            <input type="submit" value="log in">
           </form>
       <%end %>
       <p></p>

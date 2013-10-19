@@ -6,7 +6,7 @@
   <% @survey.questions.each_with_index do |question,index| %>
     <% if question.q_type == "text" %>
       <%= question.q_title %><br>
-      <label for="user_input"><input class="form_input" type="text" name="response" data-form="<%= index %>"><br>
+      <label for="user_input"><input class="form_input" type="text" name="response[<%=index%>]" data-form="<%= index %>"><br>
 
       <% elsif question.q_type == "multichoice" %>
         <%= question.q_title %><br>
@@ -20,7 +20,7 @@
   <% end %>
 <br>
 
-<input type="submit" value="Submit"></input>
+<input class="submit_button" type="submit" value="Submit"></input>
 
 
 

@@ -6,13 +6,13 @@
   <% @survey.questions.each_with_index do |question, index| %>
     <% if question.q_type == "text" %>
       <%= question.q_title %><br>
-      <label for="user_input"><input type="text" name="response[<%=question.id%>]"><br>
+      <label for="user_input"><input type="text" name="response"><br>
 
       <% elsif question.q_type == "multichoice" %>
         <%= question.q_title %><br>
         <%= p question.q_type %>
         <% question.choices.each do |choice| %>
-        <input type="radio" name="response[<%= question.id %>]" value="<%= choice.id %>"><%= choice.c_title %>
+        <input type="radio" name="response" value="<%= choice.id %>"><%= choice.c_title %>
         <% end %>
     <% end %>
 

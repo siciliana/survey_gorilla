@@ -3,7 +3,7 @@
 <form action="/submit_response/<%= @survey.id %>" method="POST">
 
 
-  <% @survey.questions.each_with_index do |question, index| %>
+  <% @survey.questions.each do |question| %>
     <% if question.q_type == "text" %>
       <%= question.q_title %><br>
       <label for="user_input"><input type="text" name="response"><br>

@@ -40,4 +40,9 @@ post '/create_survey' do
     end
 end
 
+get '/get_add_question_partial' do
+
+  erb :_add_question, layout: false
+  end
+
 

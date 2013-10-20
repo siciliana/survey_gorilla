@@ -35,7 +35,6 @@ post '/create_survey' do
 
     else
       params[:question_action] == "Submit survey"
-
       erb :survey_success
     end
 end
@@ -43,6 +42,12 @@ end
 get '/get_add_question_partial' do
 
   erb :_add_question, layout: false
-  end
+end
+
+post '/upload' do
+  @photo = Photo.create(file: params[:image],
+                        survey_id: params[:survey_id])
+  redirect to '/create_survey'
+end
 
 

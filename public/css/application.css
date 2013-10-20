@@ -2,7 +2,7 @@
 /*  background-image:url('viking.jpg');*/
 /*  background-position:right bottom;*/
   background-repeat:no-repeat;
-  background: url('viking.jpg') no-repeat center center fixed; 
+  background: url('viking.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -128,9 +128,32 @@ input[type="text"], input[type="password"] {
   line-height: 35px;
 }
 
+a:hover {
+  color: red;
+}
 
 
+a:link {
+  color: #CCCC66;
+  text-decoration: none;
+}
 
+/*a:visited {
+  color: #330000;
+}*/
+
+.surveys_created {
+  text-align: left;
+}
+
+.surveys_created h2 {
+  text-align: left;
+  padding-left: 0px;
+}
+
+#hatchet {
+  height: 60px;
+}
 
 
 

@@ -11,9 +11,18 @@ $(document).ready(function() {
         console.log(response);
       $('#add_question').append(response);
     });
-
-
   });
+
+  $(document).on('click', '#stats',function(event){
+    event.preventDefault();
+
+    var url = $(this).parent().attr('href')
+    console.log(url)
+
+    $.get(url, function(response){
+      console.log(response.data)
+    }, "json")
+  })
 });
 
 

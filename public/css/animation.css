@@ -1,0 +1,16 @@
+/*  Animations
+-------------------------------*/
+
+.helmet {
+  -webkit-animation: rock-helmet 1s ease-in-out infinite;
+}
+
+
+
+
+/*  Keyframes
+------------------------------- */
+
+@-webkit-keyframes rock-helmet {
+  50% {-webkit-transform: rotate(360deg) translateY(200px) translateX(300px); }
+}

@@ -31,7 +31,7 @@
       <% if current_user %>
           <div class="nav_bar_stuff">
             <a class="create_survey" href="/create_survey">Create Survey</a>
-
+            <a class="home" href="/welcome/<%= current_user.id %>">Home</a>
             <a class ="logout" href="/logout">Logout</a>
         </div>
         <p class="user_name"><%= current_user.username %></p>

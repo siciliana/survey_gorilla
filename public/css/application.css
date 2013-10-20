@@ -35,6 +35,10 @@ th {
   text-align: left;
 }
 
+#placholder{
+  font-size: 10px;
+}
+
 nav {
   margin:20px;
   margin-top:20px;

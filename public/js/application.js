@@ -17,8 +17,10 @@ $(document).ready(function() {
     event.preventDefault();
 
     $('#hide').hide();
-    $("#show_the_stats").html('<div id="placeholder" style="width:600px;height:300px"></div>')
+    // $("#show_the_stats").slideDown();
+    $("#show_the_stats").html('<div id="placeholder" style="width:600px;height:300px"></div>').hide()
     $("#show_the_stats").slideDown();
+
 
     var url = $(this).parent().attr('href')
     console.log(url)

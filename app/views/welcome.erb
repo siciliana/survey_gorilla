@@ -1,11 +1,12 @@
-<div class="welcome_user_box">
 
-<h1 class="welcome_user">Welcome, <%= current_user.username %>!</h1>
+<div id="hide">
 
-<br>
-<br>
-<br>
-<br>
+  <h1 class="welcome_user">Welcome, <%= current_user.username %>!</h1>
+
+  <br>
+  <br>
+  <br>
+  <br>
   <div class="surveys_created">
     <h2>Surveys you created:</h2>
       <% current_user.surveys.each do |survey| %>
@@ -21,20 +22,23 @@
           <span id="stats">Stats</span></a></li>
       </ul>
       <% end %>
-</div>
+  </div>
 
-<div class="surveys_created ">
-  <h2>Surveys you have taken:</h2>
-    <% if current_user.submissions != nil %>
-        <% current_user.submissions.each do |submission| %>
-            <ul class="survey_titles">
-              <li><%= submission.survey.title %></li>
-            </ul>
-        <% end %>
-    <% else %>
-      <ul class="survey_titles">
-              <li>You have not taken any surveys!</li>
-      </ul>
-    <% end %>
+
+  <div class="surveys_created ">
+    <h2>Surveys you have taken:</h2>
+      <% if current_user.submissions != nil %>
+          <% current_user.submissions.each do |submission| %>
+              <ul class="survey_titles">
+                <li><%= submission.survey.title %></li>
+              </ul>
+          <% end %>
+      <% else %>
+        <ul class="survey_titles">
+                <li>You have not taken any surveys!</li>
+        </ul>
+      <% end %>
+  </div>
 </div>
+<div id="show_the_stats" style="display: hidden"></div>
 

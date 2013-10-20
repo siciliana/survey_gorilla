@@ -26,6 +26,7 @@ post '/create_survey' do
   #    @photo = Photo.create(file: params[:file])
   # end
 
+
     @question = Question.create(q_type: "text", q_title: params[:add_question], survey_id: @survey.id)
     if params[:question_action] == "Add another question"
       @survey.questions << @question
@@ -37,6 +38,15 @@ post '/create_survey' do
       erb :survey_success
     end
 
+
+  params[:add_question].each do |garbage, question|
+
+      @survey.questions << Question.create(q_type: "text", q_title: "#{question}", survey_id: @survey.id)
+      @survey.save
+      current_user.surveys << @survey
+  end
+
+  erb :survey_success
 end
 
 get '/get_add_question_partial' do

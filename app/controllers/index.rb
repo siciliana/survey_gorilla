@@ -33,4 +33,8 @@ post '/login' do
 end
 
 
+# post '/upload' do
+#   photo = Photo.create(file: params[:image], survey_id: params[:survey])
+#   redirect to '/welcome/#{current_user.id}'
+# end
 

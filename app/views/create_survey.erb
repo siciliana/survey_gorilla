@@ -1,20 +1,25 @@
-<div class="container">
+<div class="container_create_survey">
+  <span class="create_survey_title"> Create a survey! </span><br><br><br>
 <!--
   <form action="http://www.google.com" method="GET">
     <label for="Title">Title</label><input type="text" name="title"><br> -->
-  <form class="survey_container" action="/create_survey" method="POST">
-  <label for="title">Title</label><input type="text" name="title"><br>
+  <form action="/create_survey" method="POST">
+  <label for="title">Survey title:  </label><input type="text" name="title"><br><br>
+
+
+
+<!-- <div id="add_picture"><p>Add a picture to your survey?</p>
+<form action="/create_survey" method="POST" enctype="multipart/form-data">
+  <input type="file" name="image"><br><br>
+</div> -->
 
 <div id="add_question">
 </div><br>
 
-<div id="add_picture"> Add a picture for your survey</div>
-<form action="upload" method="POST" enctype="multipart/form-data">
-  <input type="file" name="image"><br><br>
- 
 
-    <input id="button_submit_survey" type="submit" name="question_action" value="Submit survey"></input>
-    <input id="button_add_question" type="submit" name="question_action" value="Add another question"></input>
+    <input class="submit_button" id="button_submit_survey" type="submit" name="question_action" value="Submit survey"></input>
+    <input class ="submit_button" id="button_add_question" type="submit" name="question_action" value="Add question"></input>
+
   </form>
 
 </div>

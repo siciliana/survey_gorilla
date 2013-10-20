@@ -10,11 +10,12 @@
 }
 
 body {
-  font-family: 'Averia Serif Libre', cursive;
+  font-family: 'Amarante', cursive;
 }
 
 h1{
   float:left;
+  margin-top:0px;
 }
 
 .container {
@@ -27,15 +28,33 @@ h1{
   color:white;
   -webkit-box-shadow: 0 0 5px 5px rgb(92, 17, 17);
   box-shadow: 0 0 5px 5px rgb(92, 17, 17);
-  margin-left: 70px;
-  margin-top: 70px;
+  margin-left: 90px;
+  margin-top: 50px;
+  overflow:hidden;
 }
 
+.survey_container {
+  float:left;
+  margin-left: 30px;
+}
+
+.container_create_survey{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
 th {
   text-align: left;
 }
 
+.submit_button {
+  height: 42px;
+  width: 120px;
+  background-color:rgb(226, 226, 159);
+}
+
 nav {
+  height: 100px;
   margin:20px;
   margin-top:20px;
   padding-left: 20px;
@@ -77,7 +96,7 @@ nav {
   text-decoration: none;
   font-size: 25px;
   color:white;
-  padding-right:10px;
+  padding-right:70px;
 }
 .create_survey {
 /*  clear:both;
@@ -86,11 +105,11 @@ nav {
   text-decoration: none;
   font-size: 25px;
   color:white;
-  padding-right:10px;
+  padding-right:70px;
 }
 .login {
   float: right;
-/*  margin-top: -70px;*/
+  margin-top:30px;
   color:white;
 }
 .nav_bar_stuff{
@@ -98,6 +117,7 @@ nav {
   display:inline;
   color:white;
   text-decoration:none;
+  margin-top: 34px;
 }
 .title {
   color: white;
@@ -106,6 +126,10 @@ nav {
   padding-left:30px;
 }
 
+.welcome_user{
+  padding-left: 20px;
+  padding-top:40px;
+}
 
 .user_name {
   clear:both;
@@ -134,16 +158,23 @@ a:hover {
 
 
 a:link {
-  color: #CCCC66;
+  color: rgb(243, 243, 138);
   text-decoration: none;
 }
 
+.linkss {
+  color: rgb(243, 243, 138);
+}
+
 /*a:visited {
-  color: #330000;
+  color: rgb(243, 243, 138);
 }*/
 
 .surveys_created {
-  text-align: left;
+  clear:both;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
 }
 
 .surveys_created h2 {
@@ -157,6 +188,16 @@ a:link {
   padding-right 20px;
 }
 
+.welcome_label{
+  padding-left: 110px;
+  padding-top: 30px;
+}
 
+#add_picture {
+  text-align: center;
+}
 
+.create_survey_title{
+  font-size: 30px;
+}
 

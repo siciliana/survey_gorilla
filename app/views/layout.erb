@@ -13,25 +13,33 @@
   <link rel="stylesheet" href="/css/application.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<<<<<<< HEAD
   <script src="/js/application.js"></script>
   <script src="/js/responset.js"></script>
+=======
+  <script src="/js/application.js"></script>    
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+
+>>>>>>> 1cddb7a8a41932150b6a0c3d8950bd4ba636971a
   <link href='http://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700' rel='stylesheet' type='text/css'>
+  <link href='/css/animation.css' rel='stylesheet' type='text/css'>
 
   <title></title>
 </head>
 <body>
     <nav>
-      <h1><a class="title"> Viking Gorilla?</a></h1>
+      <h1><img id="hatchet" src="/css/viking-helmet.jpg"></img><a class="title"> Viking Gorilla?</a></h1>
       <% if current_user %>
           <div class="nav_bar_stuff">
             <a class="create_survey" href="/create_survey">Create Survey</a>
-            <a class="home" href="/welcome/<%= current_user.id %>">Home</a>
+
             <a class ="logout" href="/logout">Logout</a>
         </div>
         <p class="user_name"><%= current_user.username %></p>
       <% else %>
           <form class ="login" action="/login" method="POST">
-          
+
             <input class="text_box" type="text" name="username" placeholder="username">
             <input class="text_box" type="password" name="password" placeholder="password">
             <input type="submit" value="log in">

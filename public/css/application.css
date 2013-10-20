@@ -52,6 +52,7 @@ th {
   height: 42px;
   width: 120px;
   background-color:rgb(226, 226, 159);
+}
 
 
 nav {
@@ -185,8 +186,8 @@ a:link {
 
 #hatchet {
   height: 80px;
-  padding-left 20px;
-  padding-right 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .welcome_label{
